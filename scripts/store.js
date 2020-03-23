@@ -17,14 +17,14 @@ const addItem = (name) => {
 };
 
 const findAndToggleChecked = (id) => {
-  let toggleItem = this.findById(id).checked;
-  toggleItem = !toggleItem;
+  let toggleItem = findById(id);
+  toggleItem.checked = !toggleItem.checked;
 };
 
 const findAndUpdateName = (id, newName) => {
   try {
     item.validateName(newName);
-    let selectedItem = this.findById(id);
+    let selectedItem = findById(id);
     selectedItem.name = newName;
   } catch(error) {
     console.log(`Cannot update name: ${error.message}`);
