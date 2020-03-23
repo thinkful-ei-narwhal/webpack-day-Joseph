@@ -4,13 +4,13 @@ let items = [];
 let hideCheckedItems = false;
 
 const findById = (id) => {
-  return this.items.find(item => item.id === id);
+  return items.find(item => item.id === id);
 };
 
 const addItem = (name) => {
   try {
     item.validateName(name);
-    this.items.push(name);
+    items.push(item.create(name));
   } catch(error) {
     console.log(`Cannot add item: ${error.message}`);
   }
@@ -32,8 +32,8 @@ const findAndUpdateName = (id, newName) => {
 };
 
 const findAndDelete = (id) => {
-  let index = this.findById(id);
-  this.items.filter(item => item == index);
+  const index = findById(id);
+  items.splice(index, 1);
 };
 
 export default {
