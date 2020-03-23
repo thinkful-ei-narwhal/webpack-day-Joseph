@@ -40,6 +40,7 @@ const render = function () {
   // then we want to reassign filteredItems to a 
   // version where ONLY items with a "checked" 
   // property of false are included.
+  console.log(store);
   if (store.hideCheckedItems) {
     items = items.filter(item => !item.checked);
   }
