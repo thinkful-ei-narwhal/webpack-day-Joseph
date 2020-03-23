@@ -31,13 +31,26 @@ const generateShoppingItemsString = function (shoppingList) {
 };
 
 const render = function () {
-  // Filter item list if store prop is true by item.checked === false
+  // Set up a copy of the store's items in a local 
+  // variable 'items' that we will reassign to a new
+  // version if any filtering of the list occurs.
   let items = [...store.items];
+  console.log(items);
+  // If the `hideCheckedItems` property is true, 
+  // then we want to reassign filteredItems to a 
+  // version where ONLY items with a "checked" 
+  // property of false are included.
   if (store.hideCheckedItems) {
     items = items.filter(item => !item.checked);
   }
-  // render the shopping list in the DOM
+
+  /**
+   * At this point, all filtering work has been 
+   * done (or not done, if that's the current settings), 
+   * so we send our 'items' into our HTML generation function
+   */
   const shoppingListItemsString = generateShoppingItemsString(items);
+
   // insert that HTML into the DOM
   $('.js-shopping-list').html(shoppingListItemsString);
 };
@@ -94,19 +107,12 @@ const handleDeleteItemClicked = function () {
 };
 
 /**
- * Toggles the store.hideCheckedItems property
- */
-const toggleCheckedItemsFilter = function () {
-  store.hideCheckedItems = !store.hideCheckedItems;
-};
-
-/**
  * Places an event listener on the checkbox
  * for hiding completed items.
  */
 const handleToggleFilterClick = function () {
   $('.js-filter-checked').click(() => {
-    toggleCheckedItemsFilter();
+    store.toggleCheckedFilter();
     render();
   });
 };
