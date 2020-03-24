@@ -4,21 +4,25 @@
   "description": "Created for the Thinkful EI Program.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thinkful-ei-narwhal/webpack-day-Joseph.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Joseph Rivera",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/thinkful-ei-narwhal/webpack-day-Joseph/issues"
   },
   "homepage": "https://github.com/thinkful-ei-narwhal/webpack-day-Joseph#readme",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "cuid": "^2.1.8",
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "css-loader": "^3.4.2",

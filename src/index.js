@@ -1,7 +1,7 @@
 import $ from 'jquery';
-import shoppingList from './shopping-list.js';
-import store from './store.js';
-import item from './item.js';
+import normalize from 'normalize.css';
+import './styles/index.css';
+import shoppingList from './scripts/shopping-list.js';
 
 const main = function () {
   shoppingList.bindEventListeners();
