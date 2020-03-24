@@ -1,5 +1,5 @@
 {
-  "name": "shopping-list-modules-day-Joseph",
+  "name": "webpack-day-Joseph",
   "version": "1.0.0",
   "description": "Created for the Thinkful EI Program.",
   "main": "index.js",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/thinkful-ei-narwhal/webpack-day-Joseph/issues"
   },
-  "homepage": "https://github.com/thinkful-ei-narwhal/webpack-day-Joseph#readme"
+  "homepage": "https://github.com/thinkful-ei-narwhal/webpack-day-Joseph#readme",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }
